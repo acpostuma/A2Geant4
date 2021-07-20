@@ -1,0 +1,29 @@
+/run/initialize
+/A2/generator/Mode 1
+##initialize generator phase space
+/A2/generator/SetTMax 20 MeV
+/A2/generator/SetTMin 5 MeV
+/A2/generator/SetThetaMin 0.0 deg
+/A2/generator/SetThetaMax 180.0 deg
+/A2/generator/SetPhiMin 0.0 deg
+/A2/generator/SetPhiMax 0.0 deg
+#/A2/generator/SetBeamXSigma 3 mm
+#/A2/generator/SetBeamYSigma 3 mm
+/A2/generator/SetTargetZ0 0 mm
+/A2/generator/SetTargetThick 28.1 cm
+/A2/generator/SetTargetRadius 9.2 cm
+
+#manually set some gun stuff
+/gun/position 0 0 0
+/gun/direction 1 0 0
+/gun/energy 15 MeV
+/gun/particle alpha
+
+#set output file for writing
+/A2/event/setOutputFile out/TestHeed.root
+
+#process some events
+/run/beamOn 100
+
+
+
